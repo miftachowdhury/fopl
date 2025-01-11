@@ -13,7 +13,7 @@ var map = new mapboxgl.Map({
 var response = [];
 
 var publicSpreadsheetUrl =
-  'https://docs.google.com/spreadsheets/d/e/2PACX-1vQzEFL7PU3aOBAbemk7gjwYQ5rPS1ujik9ixPVaf9eppTut-AZy3lekvcNyDeWBGbuR9Y8uYX30sv2q/edit?usp=sharing'';
+  'https://docs.google.com/spreadsheets/d/e/2PACX-1vQzEFL7PU3aOBAbemk7gjwYQ5rPS1ujik9ixPVaf9eppTut-AZy3lekvcNyDeWBGbuR9Y8uYX30sv2q/edit?usp=sharing';
 
 function init() {
   Tabletop.init({
