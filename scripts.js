@@ -10,25 +10,25 @@ var map = new mapboxgl.Map({
   zoom: initialZoom
 });
 
-// var response = [];
-//
-// var publicSpreadsheetUrl =
-//   'https://docs.google.com/spreadsheets/d/e/2PACX-1vQzEFL7PU3aOBAbemk7gjwYQ5rPS1ujik9ixPVaf9eppTut-AZy3lekvcNyDeWBGbuR9Y8uYX30sv2q/pubhtml';
-//
-// function init() {
-//   Tabletop.init({
-//     key: publicSpreadsheetUrl,
-//     callback: showInfo,
-//     simpleSheet: true
-//   })
-// }
-//
-// function showInfo(data, tabletop) {
-//   alert('Successfully processed!')
-//   console.log(data);
-// }
-//
-// window.addEventListener('DOMContentLoaded', init)
+var response = [];
+
+var publicSpreadsheetUrl =
+  'https://docs.google.com/spreadsheets/d/e/2PACX-1vQzEFL7PU3aOBAbemk7gjwYQ5rPS1ujik9ixPVaf9eppTut-AZy3lekvcNyDeWBGbuR9Y8uYX30sv2q/pubhtml';
+
+function init() {
+  Tabletop.init({
+    key: publicSpreadsheetUrl,
+    callback: showInfo,
+    simpleSheet: true
+  })
+}
+
+function showInfo(data, tabletop) {
+  alert('Successfully processed!')
+  console.log(data);
+}
+
+window.addEventListener('DOMContentLoaded', init)
 
 
 map.addControl(new mapboxgl.NavigationControl());
