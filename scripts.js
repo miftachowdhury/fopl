@@ -10,15 +10,25 @@ var map = new mapboxgl.Map({
   zoom: initialZoom
 });
 
+var response = [];
 
-const urlRoot = "https://gateway.bibliocommons.com/v2/libraries/oaklandlibrary/rss/events?audiences=60af9e2853a5bd4500c9a385"
+var publicSpreadsheetUrl =
+  'https://docs.google.com/spreadsheets/d/e/2PACX-1vQzEFL7PU3aOBAbemk7gjwYQ5rPS1ujik9ixPVaf9eppTut-AZy3lekvcNyDeWBGbuR9Y8uYX30sv2q/pubhtml?gid=0&single=true';
 
-for (var pageNum=1; pageNum <=1; pageNum++){
-  var xml = fetch(urlRoot+'&page='+pageNum);
-  var json = xml.json();
-  console.log(json);
+function init() {
+  Tabletop.init({
+    key: publicSpreadsheetUrl,
+    callback: showInfo,
+    simpleSheet: true
+  })
 }
 
+function showInfo(data, tabletop) {
+  alert('Successfully processed!')
+  console.log(data);
+}
+
+window.addEventListener('DOMContentLoaded', init)
 
 
 map.addControl(new mapboxgl.NavigationControl());
