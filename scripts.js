@@ -10,36 +10,19 @@ var map = new mapboxgl.Map({
   zoom: initialZoom
 });
 
-
 const apiKey = 'AIzaSyC-nbTvlTo7oKHTQIt9aYDOKiy7qIJglgc'
 
-const spreadsheetId = '17VEKYHBH4I5eAs7oQyaEbG27n8Euu_xickYszPtnRFE'; // Replace with your spreadsheet ID
-const sheetName = 'Current Events'; // Replace with your sheet name
+const ssEventsId = '17VEKYHBH4I5eAs7oQyaEbG27n8Euu_xickYszPtnRFE';
+const sheetEvents = 'Current Events';
 
-fetch(`https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${sheetName}?key=${apiKey}`)
+fetch(`https://sheets.googleapis.com/v4/spreadsheets/${ssEventsId}/values/${sheetEvents}?key=${apiKey}`)
   .then(response => response.json())
   .then(data => console.log(data.values))
   .catch(error => console.error('Error:', error));
 
-            // var response = [];
-            //
-            // var publicSpreadsheetUrl =
-            //   'https://docs.google.com/spreadsheets/d/e/2PACX-1vQzEFL7PU3aOBAbemk7gjwYQ5rPS1ujik9ixPVaf9eppTut-AZy3lekvcNyDeWBGbuR9Y8uYX30sv2q/pubhtml';
-            //
-            // function init() {
-            //   Tabletop.init({
-            //     key: publicSpreadsheetUrl,
-            //     callback: showInfo,
-            //     simpleSheet: true
-            //   })
-            // }
-            //
-            // function showInfo(data, tabletop) {
-            //   alert('Successfully processed!')
-            //   console.log(data);
-            // }
-            //
-            // window.addEventListener('DOMContentLoaded', init)
+console.log(branchList)
+
+
 
 
 map.addControl(new mapboxgl.NavigationControl());
