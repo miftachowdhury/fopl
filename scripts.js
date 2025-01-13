@@ -23,41 +23,43 @@ fetch(`https://sheets.googleapis.com/v4/spreadsheets/${ssEventsId}/values/${shee
   .catch(error => console.error('Error:', error));
 
   $(document).ready(function() {
-    // Counter
-    var counter=0;
+    
+        // Counter
+        var counter=0;
 
-    // Current markers
-    var currentMarkers = [];
+        // Current markers
+        var currentMarkers = [];
 
-    // Set default checks to Hospital and Bronx
-        // $( window ).on( "load", function() {
-        //   $("#X").click()
-        //   $("#hosp").click()
+        // Set default checks to Hospital and Bronx
+            // $( window ).on( "load", function() {
+            //   $("#X").click()
+            //   $("#hosp").click()
+
+
+      // Create and map markers
+      branchList.forEach((item) => {
+
+              oneMarker = new mapboxgl.Marker()
+              .setLngLat([item.long, item.lat])
+              .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
+                        .setHTML(`<b>${item.name}</b><br>${item.phone}`))
+              .addTo(map);
+             currentMarkers.push(oneMarker);
+
+            // Fit bounds after load (i.e. after two clicks 1) Bronx and 2) Hospital)
+            // if (counter>2) {
+            //   var bounds = new mapboxgl.LngLatBounds();
+            //   arrDisp.forEach(function(item) {
+            //     bounds.extend([item.long, item.lat]);
+            //   });
+            //   map.fitBounds(bounds, {padding: {top: 50, bottom: 50, left: 50, right: 50}});
+            // }
+            // counter += 1;
+
+            // For early epxloration
+            console.log(oneMarker);
+            console.log(oneMarker["_lngLat"]);
+          });
+
 
     });
-
-
-  // Create and map markers
-  branchList.forEach((item) => {
-
-          oneMarker = new mapboxgl.Marker()
-          .setLngLat([item.long, item.lat])
-          .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
-                    .setHTML(`<b>${item.name}</b><br>${item.phone}`))
-          .addTo(map);
-         currentMarkers.push(oneMarker);
-
-        // Fit bounds after load (i.e. after two clicks 1) Bronx and 2) Hospital)
-        // if (counter>2) {
-        //   var bounds = new mapboxgl.LngLatBounds();
-        //   arrDisp.forEach(function(item) {
-        //     bounds.extend([item.long, item.lat]);
-        //   });
-        //   map.fitBounds(bounds, {padding: {top: 50, bottom: 50, left: 50, right: 50}});
-        // }
-        // counter += 1;
-
-        // For early epxloration
-        console.log(oneMarker);
-        console.log(oneMarker["_lngLat"]);
-      });
