@@ -20,8 +20,8 @@ body {
   position: absolute;
   top: 40px;
   bottom: 0;
-  right: 0;
-  left: 600px;
+  left: 0;
+  right: 600px;
   border: 1px solid black;
 }
 
