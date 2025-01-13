@@ -1,7 +1,7 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoibWNob3dkaHVyeSIsImEiOiJjazZzdHJta2swNzN2M2tyeHBmZTcycTI4In0.StlNQAWNUjcDoPBeZyIvGw';
 
-var initialCenterPoint = [-122.16788418201577, 37.805216196634106]
-var initialZoom = 11
+var initialCenterPoint = [ -122.18265502632207, 37.83187604678064]
+var initialZoom = 11.5
 
 var map = new mapboxgl.Map({
   container: 'map-container',
