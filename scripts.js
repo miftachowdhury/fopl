@@ -1,7 +1,7 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoibWNob3dkaHVyeSIsImEiOiJjazZzdHJta2swNzN2M2tyeHBmZTcycTI4In0.StlNQAWNUjcDoPBeZyIvGw';
 
 var initialCenterPoint = [-122.271, 37.804]
-var initialZoom = 10
+var initialZoom = 15
 
 var map = new mapboxgl.Map({
   container: 'map-container',
@@ -23,7 +23,7 @@ fetch(`https://sheets.googleapis.com/v4/spreadsheets/${ssEventsId}/values/${shee
   .catch(error => console.error('Error:', error));
 
   $(document).ready(function() {
-    
+
         // Counter
         var counter=0;
 
