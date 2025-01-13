@@ -22,6 +22,20 @@ fetch(`https://sheets.googleapis.com/v4/spreadsheets/${ssEventsId}/values/${shee
   .then(data => console.log(data.values))
   .catch(error => console.error('Error:', error));
 
+  $(document).ready(function() {
+    // Counter
+    var counter=0;
+
+    // Current markers
+    var currentMarkers = [];
+
+    // Set default checks to Hospital and Bronx
+        // $( window ).on( "load", function() {
+        //   $("#X").click()
+        //   $("#hosp").click()
+
+    });
+
 
   // Create and map markers
   branchList.forEach((item) => {
