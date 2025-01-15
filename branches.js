@@ -8,7 +8,7 @@ const branchList =
   ,{ branch_id: 'ASA', branch: 'Asian Branch',           lat: 37.80073773, long:	-122.271158}
   ,{ branch_id: 'RRA', branch: 'Rockridge Branch',       lat: 37.8399084,  long:	-122.2510759}
   ,{ branch_id: 'CCA', branch: 'César E. Chávez Branch', lat: 37.7760604,  long:	-122.2250056}
-  ,{ branch_id: 'XXJ', branch: "Main Children's Room",	  lat: 37.8009777,  long:	-122.2636082}
+  // ,{ branch_id: 'XXJ', branch: "Main Children's Room",	  lat: 37.8009777,  long:	-122.2636082}
   ,{ branch_id: '81A', branch: '81st Avenue Branch',	    lat: 37.7535905,  long:	-122.1855516}
   ,{ branch_id: 'MOA', branch: 'Montclair Branch',	      lat: 37.8319831,  long:	-122.2141107}
   ,{ branch_id: 'DMA', branch: 'Dimond Branch',	        lat: 37.8014594,  long:	-122.2160391}

@@ -101,23 +101,23 @@ const sheetEvents = 'Current Events';
                       .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
                                 .setHTML(`<b>${item.branch}</b><br>
 
-                                          <br${item.event1.evDate} - ${item.event1.evTime}:
+                                          <br>${item.event1.evDate} - ${item.event1.evTime}:
                                           <a href=${item.event1.evPageUrl}> ${item.event1.evTitle} </a>
                                           <a href=${item.event1.evFormUrl}> Sign Up </a>
 
-                                          <br${item.event2.evDate} - ${item.event2.evTime}: ${item.event2.evTitle}
+                                          <br>${item.event2.evDate} - ${item.event2.evTime}: ${item.event2.evTitle}
                                           <a href=${item.event2.evPageUrl}> ${item.event2.evTitle} </a>
                                           <a href=${item.event2.evFormUrl}> Sign Up </a>
 
-                                          <br${item.event3.evDate} - ${item.event3.evTime}: ${item.event3.evTitle}
+                                          <br>${item.event3.evDate} - ${item.event3.evTime}: ${item.event3.evTitle}
                                           <a href=${item.event3.evPageUrl}> ${item.event3.evTitle} </a>
                                           <a href=${item.event3.evFormUrl}> Sign Up </a>
 
-                                          <br${item.event4.evDate} - ${item.event4.evTime}: ${item.event4.evTitle}
+                                          <br>${item.event4.evDate} - ${item.event4.evTime}: ${item.event4.evTitle}
                                           <a href=${item.event4.evPageUrl}> ${item.event4.evTitle} </a>
                                           <a href=${item.event4.evFormUrl}> Sign Up </a>
 
-                                          <br${item.event5.evDate} - ${item.event5.evTime}: ${item.event5.evTitle}
+                                          <br>${item.event5.evDate} - ${item.event5.evTime}: ${item.event5.evTitle}
                                           <a href=${item.event5.evPageUrl}> ${item.event5.evTitle} </a>
                                           <a href=${item.event5.evFormUrl}> Sign Up </a>
                                         `)
