@@ -58,29 +58,35 @@ const sheetEvents = 'Current Events';
                 var currentMarkers = [];
 
 
-            events.forEach((item) => {
-              i=0;
+
               branchList.forEach((branchItem) => {
-                console.log('item[3]:', item[3]);
-                console.log('branchItem.branch_id:', branchItem.branch_id);
-                if (item[3] == branchItem.branch_id){
+                i=0;
+
+                events.forEach(() => {
+                  console.log('item[3]:', item[3]);
+                  console.log('branchItem.branch_id:', branchItem.branch_id);
                   if(i==5){continue};
-                  console.log(item[3], '==', branchItem.branch_id);
-                  console.log(`event${i+1}`);
-                  branchItem[`event${i+1}`] =
-                      {evDate: item[5]
-                        ,evTime: item[6]
-                        ,evTitle: item[7]
-                        ,evDescrip: item[8]
-                        ,evPageUrl: item[2]
-                        ,evFormUrl: item[1]
-                      }
-                  console.log(branchItem);
-                  i++;
-                  return;
-                }
+
+                  if (item[3] == branchItem.branch_id){
+
+                    console.log(item[3], '==', branchItem.branch_id);
+                    console.log(`event${i+1}`);
+                    branchItem[`event${i+1}`] =
+                        {evDate: item[5]
+                          ,evTime: item[6]
+                          ,evTitle: item[7]
+                          ,evDescrip: item[8]
+                          ,evPageUrl: item[2]
+                          ,evFormUrl: item[1]
+                        }
+                    console.log(branchItem);
+                    i++;
+                    return;
+                  }
+
+                });
+
               });
-            });
 
 
               // Create and map markers
