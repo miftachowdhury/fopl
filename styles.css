@@ -20,6 +20,10 @@ body {
   cursor: pointer;
 }
 
+.mapboxgl-popup-content-wrapper{
+  width: 200px;
+}
+
 /* absolute position the map container as full screen, leaving 300 pixels on the left */
 #map-container {
   position: absolute;
