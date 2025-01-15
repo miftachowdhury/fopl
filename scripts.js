@@ -20,7 +20,7 @@ const sheetEvents = 'Current Events';
   console.log(events[0]);
   console.log(events[0][0]);
   console.log(events[1]);
-  cosnole.log(events[1][0]);
+  console.log(events[1][0]);
 
         mapboxgl.accessToken = 'pk.eyJ1IjoibWNob3dkaHVyeSIsImEiOiJjazZzdHJta2swNzN2M2tyeHBmZTcycTI4In0.StlNQAWNUjcDoPBeZyIvGw';
 
