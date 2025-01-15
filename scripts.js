@@ -65,7 +65,7 @@ const sheetEvents = 'Current Events';
                 events.forEach(() => {
                   console.log('item[3]:', item[3]);
                   console.log('branchItem.branch_id:', branchItem.branch_id);
-                  if(i==5){continue};
+                  if(i==5){return};
 
                   if (item[3] == branchItem.branch_id){
 
