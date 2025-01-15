@@ -43,7 +43,14 @@ fetch(`https://sheets.googleapis.com/v4/spreadsheets/${ssEventsId}/values/${shee
               oneMarker = new mapboxgl.Marker()
               .setLngLat([item.long, item.lat])
               .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
-                        .setHTML(`<b>${item.name}</b><br>${item.phone}`))
+                        .setHTML(`<b>${item.branch}</b><br>
+
+
+
+
+
+                                `)
+                      )
               .addTo(map);
              currentMarkers.push(oneMarker);
 
