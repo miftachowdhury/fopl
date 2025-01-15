@@ -14,7 +14,8 @@ const sheetEvents = 'Current Events';
   let data_local = await getData();
   console.log(data_local);
 
-  events = data_local.values.shift();
+  events = data_local.values;
+  events.shift();
 
   console.log(events);
   console.log(events[0]);
