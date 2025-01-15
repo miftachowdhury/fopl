@@ -21,11 +21,11 @@ body {
 }
 
 .mapboxgl-popup-content {
-  width: 200px;
+  width: 400px;
 }
 
 .mapboxgl-popup-content-wrapper{
-  width: 200px;
+  width: 400px;
 }
 
 /* absolute position the map container as full screen, leaving 300 pixels on the left */
