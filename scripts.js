@@ -74,9 +74,10 @@ const sheetEvents = 'Current Events';
                         ,evPageUrl: item[2]
                         ,evFormUrl: item[1]
                       }
-                  console.log(branchItem.properties);
-                  console.log(branchItem.values);
+                  console.log(Object.properties(branchItem));
+                  console.log(Object.values(branchItem));
                   i++;
+                  break;
                 }
               });
             });
