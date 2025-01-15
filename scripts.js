@@ -18,9 +18,11 @@ const apiKey = 'AIzaSyC-nbTvlTo7oKHTQIt9aYDOKiy7qIJglgc'
 const ssEventsId = '17VEKYHBH4I5eAs7oQyaEbG27n8Euu_xickYszPtnRFE';
 const sheetEvents = 'Current Events';
 
+events = []
+
 fetch(`https://sheets.googleapis.com/v4/spreadsheets/${ssEventsId}/values/${sheetEvents}?key=${apiKey}`)
   .then(response => response.json())
-  .then(data => console.log(data.values))
+  .then(data => console.log(data.values); events.push(data))
   .catch(error => console.error('Error:', error));
 
   $(document).ready(function() {
@@ -33,7 +35,7 @@ fetch(`https://sheets.googleapis.com/v4/spreadsheets/${ssEventsId}/values/${shee
 
 
   for (i=0; i <= 5;){
-    data.forEach((item) => {
+    events.forEach((item) => {
       branchList.forEach((branchItem) => {
         if (item[3] == branchItem.branch_id){
           branchItem[`event${i+1}`] =
