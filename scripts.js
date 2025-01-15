@@ -62,7 +62,7 @@ const sheetEvents = 'Current Events';
               branchList.forEach((branchItem) => {
                 i=0;
 
-                events.forEach(() => {
+                events.forEach((item) => {
                   console.log('item[3]:', item[3]);
                   console.log('branchItem.branch_id:', branchItem.branch_id);
                   if(i==5){return};
