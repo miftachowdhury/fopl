@@ -25,7 +25,7 @@ fetch(`https://sheets.googleapis.com/v4/spreadsheets/${ssEventsId}/values/${shee
   .then(data => events.push(data))
   .catch(error => console.error('Error:', error));
 
-  console.log(data);
+  console.log(events);
 
   $(document).ready(function() {
 
