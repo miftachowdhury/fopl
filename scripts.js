@@ -14,6 +14,8 @@ const sheetEvents = 'Current Events';
   let data_local = await getData();
   console.log(data_local);
 
+  events = data_local;
+
         mapboxgl.accessToken = 'pk.eyJ1IjoibWNob3dkaHVyeSIsImEiOiJjazZzdHJta2swNzN2M2tyeHBmZTcycTI4In0.StlNQAWNUjcDoPBeZyIvGw';
 
         var initialCenterPoint = [ -122.23, 37.8]
@@ -49,23 +51,23 @@ const sheetEvents = 'Current Events';
                 var currentMarkers = [];
 
 
-          // for (i=0; i <= 5;){
-          //   events.forEach((item) => {
-          //     branchList.forEach((branchItem) => {
-          //       if (item[3] == branchItem.branch_id){
-          //         branchItem[`event${i+1}`] =
-          //             {evDate: item[5]
-          //               ,evTime: item[6]
-          //               ,evTitle: item[7]
-          //               ,evDescrip: item[8]
-          //               ,evPageUrl: item[2]
-          //               ,evFormUrl: item[1]
-          //             }
-          //         i++;
-          //       }
-          //     });
-          //   });
-          // }
+          for (i=0; i <= 5;){
+            events.forEach((item) => {
+              branchList.forEach((branchItem) => {
+                if (item[3] == branchItem.branch_id){
+                  branchItem[`event${i+1}`] =
+                      {evDate: item[5]
+                        ,evTime: item[6]
+                        ,evTitle: item[7]
+                        ,evDescrip: item[8]
+                        ,evPageUrl: item[2]
+                        ,evFormUrl: item[1]
+                      }
+                  i++;
+                }
+              });
+            });
+          }
 
               // Create and map markers
               branchList.forEach((item) => {
