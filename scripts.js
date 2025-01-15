@@ -22,8 +22,7 @@ events = [];
 var obj;
 fetch(`https://sheets.googleapis.com/v4/spreadsheets/${ssEventsId}/values/${sheetEvents}?key=${apiKey}`)
   .then(response => response.json())
-  .then(data => obj = data)
-  .then(() => callback(obj))
+  .then(data => console.log(data.values))
   .catch(error => console.error('Error:', error));
 
   console.log(obj);
