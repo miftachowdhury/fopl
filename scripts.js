@@ -14,7 +14,7 @@ const sheetEvents = 'Current Events';
   let data_local = await getData();
   console.log(data_local);
 
-  events = data_local.values;
+  events = data_local.values.shift();
 
   console.log(events);
   console.log(events[0]);
@@ -61,8 +61,10 @@ const sheetEvents = 'Current Events';
             events.forEach((item) => {
               branchList.forEach((branchItem) => {
                 console.log('item[3]:', item[3]);
-                console.log('branchItem.branch_id', branchItem.branch_id);
+                console.log('branchItem.branch_id:', branchItem.branch_id);
                 if (item[3] == branchItem.branch_id){
+                  console.log(item[3], '==', branchItem.branch_id);
+                  console.log(`event${i+1}`);
                   branchItem[`event${i+1}`] =
                       {evDate: item[5]
                         ,evTime: item[6]
