@@ -105,19 +105,19 @@ const sheetEvents = 'Current Events';
                                           <a href=${item.event1.evPageUrl}> ${item.event1.evTitle} </a> -
                                           <a href=${item.event1.evFormUrl}> Sign Up </a>
 
-                                          <br><br>${item.event2.evDate} - ${item.event2.evTime}: ${item.event2.evTitle}
+                                            <br><br>${item.event2.evDate} - ${item.event2.evTime}:
                                           <a href=${item.event2.evPageUrl}> ${item.event2.evTitle} </a> -
                                           <a href=${item.event2.evFormUrl}> Sign Up </a>
 
-                                          <br><br>${item.event3.evDate} - ${item.event3.evTime}: ${item.event3.evTitle}
+                                          <br><br>${item.event3.evDate} - ${item.event3.evTime}:
                                           <a href=${item.event3.evPageUrl}> ${item.event3.evTitle} </a> -
                                           <a href=${item.event3.evFormUrl}> Sign Up </a>
 
-                                          <br><br>${item.event4.evDate} - ${item.event4.evTime}: ${item.event4.evTitle}
+                                          <br><br>${item.event4.evDate} - ${item.event4.evTime}:
                                           <a href=${item.event4.evPageUrl}> ${item.event4.evTitle} </a> -
                                           <a href=${item.event4.evFormUrl}> Sign Up </a>
 
-                                          <br><br>${item.event5.evDate} - ${item.event5.evTime}: ${item.event5.evTitle}
+                                          <br><br>${item.event5.evDate} - ${item.event5.evTime}: 
                                           <a href=${item.event5.evPageUrl}> ${item.event5.evTitle} </a> -
                                           <a href=${item.event5.evFormUrl}> Sign Up </a>
                                         `)
