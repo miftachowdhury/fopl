@@ -58,12 +58,13 @@ const sheetEvents = 'Current Events';
                 var currentMarkers = [];
 
 
-          for (i=0; i <= 5;){
             events.forEach((item) => {
+              i=0;
               branchList.forEach((branchItem) => {
                 console.log('item[3]:', item[3]);
                 console.log('branchItem.branch_id:', branchItem.branch_id);
                 if (item[3] == branchItem.branch_id){
+                  if(i==5){continue};
                   console.log(item[3], '==', branchItem.branch_id);
                   console.log(`event${i+1}`);
                   branchItem[`event${i+1}`] =
@@ -80,7 +81,7 @@ const sheetEvents = 'Current Events';
                 }
               });
             });
-          }
+
 
               // Create and map markers
               branchList.forEach((item) => {
