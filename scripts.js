@@ -61,7 +61,11 @@ const sheetEvents = 'Current Events';
 
               branchList.forEach((branchItem) => {
                 i=0;
-
+                branchItem.event1: {evDate: '', evTime: '', evTitle: '', evDescrip: '', evPageUrl: '', evFormUrl: ''}
+                branchItem.event2: {evDate: '', evTime: '', evTitle: '', evDescrip: '', evPageUrl: '', evFormUrl: ''}
+                branchItem.event3: {evDate: '', evTime: '', evTitle: '', evDescrip: '', evPageUrl: '', evFormUrl: ''}
+                branchItem.event4: {evDate: '', evTime: '', evTitle: '', evDescrip: '', evPageUrl: '', evFormUrl: ''}
+                branchItem.event5: {evDate: '', evTime: '', evTitle: '', evDescrip: '', evPageUrl: '', evFormUrl: ''}
                 events.forEach((item) => {
                   console.log('item[3]:', item[3]);
                   console.log('branchItem.branch_id:', branchItem.branch_id);
