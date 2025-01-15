@@ -25,6 +25,7 @@ fetch(`https://sheets.googleapis.com/v4/spreadsheets/${ssEventsId}/values/${shee
   .then(response => response.json())
   // .then(data => console.log(data.values))
   .then(data => obj = data.values)
+  .then(() => callback(obj))
   .catch(error => console.error('Error:', error));
 
 console.log(obj);
