@@ -60,6 +60,8 @@ const sheetEvents = 'Current Events';
           for (i=0; i <= 5;){
             events.forEach((item) => {
               branchList.forEach((branchItem) => {
+                console.log('item[3]:', item[3]);
+                console.log('branchItem.branch_id', branchItem.branch_id);
                 if (item[3] == branchItem.branch_id){
                   branchItem[`event${i+1}`] =
                       {evDate: item[5]
@@ -70,7 +72,7 @@ const sheetEvents = 'Current Events';
                         ,evFormUrl: item[1]
                       }
                   console.log(branchItem.properties);
-                  console.log(branchItem.values);    
+                  console.log(branchItem.values);
                   i++;
                 }
               });
