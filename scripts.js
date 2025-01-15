@@ -18,12 +18,14 @@ const apiKey = 'AIzaSyC-nbTvlTo7oKHTQIt9aYDOKiy7qIJglgc'
 const ssEventsId = '17VEKYHBH4I5eAs7oQyaEbG27n8Euu_xickYszPtnRFE';
 const sheetEvents = 'Current Events';
 
-events = []
+events = [];
 
 fetch(`https://sheets.googleapis.com/v4/spreadsheets/${ssEventsId}/values/${sheetEvents}?key=${apiKey}`)
   .then(response => response.json())
-  .then(data => console.log(data.values); events.push(data))
+  .then(data => events.push(data))
   .catch(error => console.error('Error:', error));
+
+  console.log(data);
 
   $(document).ready(function() {
 
