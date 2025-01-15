@@ -74,8 +74,7 @@ const sheetEvents = 'Current Events';
                         ,evPageUrl: item[2]
                         ,evFormUrl: item[1]
                       }
-                  console.log(Object.properties(branchItem));
-                  console.log(Object.values(branchItem));
+                  console.log(branchItem);
                   i++;
                   return;
                 }
