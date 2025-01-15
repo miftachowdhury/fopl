@@ -20,10 +20,14 @@ const sheetEvents = 'Current Events';
 
 events = [];
 
+var obj;
 fetch(`https://sheets.googleapis.com/v4/spreadsheets/${ssEventsId}/values/${sheetEvents}?key=${apiKey}`)
   .then(response => response.json())
   .then(data => console.log(data.values))
+  .then(data => obj = data.values)
   .catch(error => console.error('Error:', error));
+
+console.log(obj);
 
 
   $(document).ready(function() {
