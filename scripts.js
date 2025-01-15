@@ -19,13 +19,12 @@ const ssEventsId = '17VEKYHBH4I5eAs7oQyaEbG27n8Euu_xickYszPtnRFE';
 const sheetEvents = 'Current Events';
 
 events = [];
-var obj;
+
 fetch(`https://sheets.googleapis.com/v4/spreadsheets/${ssEventsId}/values/${sheetEvents}?key=${apiKey}`)
   .then(response => response.json())
   .then(data => console.log(data.values))
   .catch(error => console.error('Error:', error));
 
-  console.log(obj);
 
   $(document).ready(function() {
 
@@ -36,23 +35,23 @@ fetch(`https://sheets.googleapis.com/v4/spreadsheets/${ssEventsId}/values/${shee
         var currentMarkers = [];
 
 
-  for (i=0; i <= 5;){
-    events.forEach((item) => {
-      branchList.forEach((branchItem) => {
-        if (item[3] == branchItem.branch_id){
-          branchItem[`event${i+1}`] =
-              {evDate: item[5]
-                ,evTime: item[6]
-                ,evTitle: item[7]
-                ,evDescrip: item[8]
-                ,evPageUrl: item[2]
-                ,evFormUrl: item[1]
-              }
-          i++;
-        }
-      });
-    });
-  }
+  // for (i=0; i <= 5;){
+  //   events.forEach((item) => {
+  //     branchList.forEach((branchItem) => {
+  //       if (item[3] == branchItem.branch_id){
+  //         branchItem[`event${i+1}`] =
+  //             {evDate: item[5]
+  //               ,evTime: item[6]
+  //               ,evTitle: item[7]
+  //               ,evDescrip: item[8]
+  //               ,evPageUrl: item[2]
+  //               ,evFormUrl: item[1]
+  //             }
+  //         i++;
+  //       }
+  //     });
+  //   });
+  // }
 
       // Create and map markers
       branchList.forEach((item) => {
