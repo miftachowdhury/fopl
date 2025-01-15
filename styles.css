@@ -16,11 +16,8 @@ body {
   background-color: #eeeeee;
 }
 
-
-/* on hover, make the background darker and turn the cursor to a pointer */
-button:hover {
+.mapboxgl-marker:hover {
   cursor: pointer;
-  background-color: #006987;
 }
 
 /* absolute position the map container as full screen, leaving 300 pixels on the left */

@@ -31,11 +31,24 @@ fetch(`https://sheets.googleapis.com/v4/spreadsheets/${ssEventsId}/values/${shee
         // Current markers
         var currentMarkers = [];
 
-        // Set default checks to Hospital and Bronx
-            // $( window ).on( "load", function() {
-            //   $("#X").click()
-            //   $("#hosp").click()
 
+  for (i=0; i <= 5;){
+    data.forEach((item) => {
+      branchList.forEach((branchItem) => {
+        if (item[3] == branchItem.branch_id){
+          branchItem[`event${i+1}`] =
+              {evDate: item[5]
+                ,evTime: item[6]
+                ,evTitle: item[7]
+                ,evDescrip: item[8]
+                ,evPageUrl: item[2]
+                ,evFormUrl: item[1]
+              }
+          i++;
+        }
+      });
+    });
+  }
 
       // Create and map markers
       branchList.forEach((item) => {
@@ -44,11 +57,11 @@ fetch(`https://sheets.googleapis.com/v4/spreadsheets/${ssEventsId}/values/${shee
               .setLngLat([item.long, item.lat])
               .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
                         .setHTML(`<b>${item.branch}</b><br>
-
-
-
-
-
+                                  <br${event1.evDate} - ${event1.evTime}: ${event1.evTitle}
+                                  <br${event2.evDate} - ${event2.evTime}: ${event2.evTitle}
+                                  <br${event3.evDate} - ${event3.evTime}: ${event3.evTitle}
+                                  <br${event4.evDate} - ${event4.evTime}: ${event4.evTitle}
+                                  <br${event5.evDate} - ${event5.evTime}: ${event5.evTitle}
                                 `)
                       )
               .addTo(map);
